@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="115948" started-at="2020-01-23T13:52:59Z" finished-at="2020-01-23T13:54:55Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="115948" started-at="2020-01-23T13:52:59Z" finished-at="2020-01-23T13:54:55Z">
+      <class name="com.salesforce.test.website.CreateObjectTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.salesforce.test.website.CreateObjectTest@15d0c81b]" name="beforeSuite" is-config="true" duration-ms="19" started-at="2020-01-23T19:22:59Z" finished-at="2020-01-23T19:22:59Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.salesforce.test.website.CreateObjectTest@15d0c81b]" name="setUp" is-config="true" duration-ms="27307" started-at="2020-01-23T19:22:59Z" finished-at="2020-01-23T19:23:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="createAContactAndDeleteTest()[pri:0, instance:com.salesforce.test.website.CreateObjectTest@15d0c81b]" name="createAContactAndDeleteTest" duration-ms="87154" started-at="2020-01-23T19:23:26Z" finished-at="2020-01-23T19:24:53Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //span[contains(text(),'New Contact')] (tried for 10 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[contains(text(),'New Contact')] (tried for 10 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.salesforce.driver.website.SFWebsiteDriver.waitForElementToBeClickable(SFWebsiteDriver.java:139)
+	at com.salesforce.website.CommonPages.SFHomePage.clickOnNewContactFromContactsMenu(SFHomePage.java:57)
+	at com.salesforce.test.website.CreateObjectTest.createAContactAndDeleteTest(CreateObjectTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //span[contains(text(),'New Contact')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'NODE1280', ip: '192.168.15.160', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: SFWebsiteDriver
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:882)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:881)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:643)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:640)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAContactAndDeleteTest -->
+        <test-method status="PASS" signature="tearDownSession()[pri:0, instance:com.salesforce.test.website.CreateObjectTest@15d0c81b]" name="tearDownSession" is-config="true" duration-ms="1048" started-at="2020-01-23T19:24:53Z" finished-at="2020-01-23T19:24:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSession -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.salesforce.test.website.CreateObjectTest@15d0c81b]" name="afterSuite" is-config="true" duration-ms="272" started-at="2020-01-23T19:24:55Z" finished-at="2020-01-23T19:24:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.salesforce.test.website.CreateObjectTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
